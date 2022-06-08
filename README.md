@@ -4,6 +4,8 @@ This vagrant file uses the automated scripts in the repository https://github.co
 
 ## Pre-requisites
 
+Install the following softwares on your machine
+
 - Git
 - VirtualBox
 - vagrant
@@ -65,3 +67,13 @@ central-ledger health test: http://central-ledger.local/health
   ```
   helm test ml --logs
   ```
+
+## P2P transfer using Testing Toolkit
+
+- After executing the `helm tests`, we can make a P2P transfer using testing toolkit UI
+- Open your web browser and go to http://testing-toolkit.local/
+- Go to 'Test Runner'
+- Go to `Collection Manager`, click on `Import from Github` and import the folder 'golden_path/feature_tests/p2p_money_transfer'
+- Select the file `p2p_money_transfer/p2p_happy_path.json` and close the 'Collection Manager'
+- Click on `Run` button at the rop right corner and see the results
+- After test case execution, edit the test case and look for the results tab in each request in the `Test case Editor`
