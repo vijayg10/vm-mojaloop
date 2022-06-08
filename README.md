@@ -16,6 +16,7 @@ Run the following commands to deploy mojaloop
 git clone https://github.com/vijayg10/vm-mojaloop.git
 vagrant up
 ```
+** This will take approximately 10-20min depending on the system configuration.
 
 ## Verifying the deployment
 
@@ -40,3 +41,27 @@ Note: The examples below are only applicable to a local deployment. The entries 
 ml-api-adapter health test: http://ml-api-adapter.local/health
 
 central-ledger health test: http://central-ledger.local/health
+
+## Look at the pods
+
+- Login to the VM using the following command
+  ```
+  vagrant ssh
+  ```
+
+- From the VM, use the following command to get the pods in kubernetes
+  ```
+  kubectl get pods
+  ```
+
+## Execute helm tests
+
+- Login to the VM using the following command
+  ```
+  vagrant ssh
+  ```
+
+- From the VM, use the following command to execute TTK test cases
+  ```
+  helm test ml --logs
+  ```
