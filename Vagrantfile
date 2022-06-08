@@ -69,7 +69,9 @@ Vagrant.configure("2") do |config|
     git clone https://github.com/tdaly61/mini-loop.git
     ~vagrant/mini-loop/install/mini-loop/ubuntu/k8s-install.sh -m install -u vagrant
     source ~vagrant/.bashrc
-    ~vagrant/mini-loop/install/mini-loop/scripts/01_install_miniloop.sh
+    # helm search repo --registry-config ~vagrant/.config/helm/registry.json --repository-cache ~vagrant/.cache/helm/repository --repository-config ~vagrant/.config/helm/repositories.yaml
+    # sudo -u vagrant helm search repo
+    sudo -u vagrant ~vagrant/mini-loop/install/mini-loop/scripts/01_install_miniloop.sh
     # helm -n default test ml --logs
   SHELL
 end
