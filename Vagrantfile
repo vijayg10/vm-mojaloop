@@ -64,12 +64,12 @@ Vagrant.configure("2") do |config|
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
-    git clone https://github.com/tdaly61/mini-loop.git
-    ~vagrant/mini-loop/install/mini-loop/ubuntu/k8s-install.sh -m install -u vagrant
-    source ~vagrant/.bashrc
+    # git clone https://github.com/tdaly61/mini-loop.git
+    # ~vagrant/mini-loop/install/mini-loop/ubuntu/k8s-install.sh -m install -u vagrant
+    # source ~vagrant/.bashrc
     # The following line is required because there is a mis-configuration in the miniloop repo
-    sed -i ~vagrant/mini-loop/install/mini-loop/etc/miniloop_values.yaml -e 's/http:\/\/testing-toolkit.local:8080/http:\/\/testing-toolkit.local/g'
-    sudo -u vagrant ~vagrant/mini-loop/install/mini-loop/scripts/01_install_miniloop.sh
+    sed -i ~vagrant/mini-loop/install/mini-loop/etc/miniloop_values.yaml -e "s/http:\\/\\/testing-toolkit.local:8080/http:\\/\\/testing-toolkit.local/g"
+    # sudo -u vagrant ~vagrant/mini-loop/install/mini-loop/scripts/01_install_miniloop.sh
     # helm -n default test ml --logs
   SHELL
 end
