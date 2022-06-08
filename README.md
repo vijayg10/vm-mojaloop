@@ -37,7 +37,9 @@ vi /etc/hosts
 ** Windows the file can be updated in notepad - need to open with Administrative privileges. File location C:\Windows\System32\drivers\etc\hosts.
 
 
-### Test system health in your browser after installation. This will only work if you have an active helm chart deployment running.
+### Test system health in your browser after installation.
+
+This will only work if you have an active helm chart deployment running.
 
 Note: The examples below are only applicable to a local deployment. The entries should match the DNS values or ingress rules as configured in the values.yaml or otherwise matching any custom ingress rules configured.
 
