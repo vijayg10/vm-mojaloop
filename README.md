@@ -16,6 +16,7 @@ Run the following commands to deploy mojaloop
 
 ```
 git clone https://github.com/vijayg10/vm-mojaloop.git
+cd vm-mojaloop
 vagrant up
 ```
 ** This will take approximately 10-20min depending on the system configuration.
