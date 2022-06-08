@@ -1,5 +1,7 @@
 # Deploying mojaloop in local machine using virtual box and vagrant
 
+This vagrant file uses the automated scripts in the repository https://github.com/tdaly61/mini-loop
+
 ## Pre-requisites
 
 - Git
