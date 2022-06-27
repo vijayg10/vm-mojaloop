@@ -64,7 +64,7 @@ Vagrant.configure("2") do |config|
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
-    git clone https://github.com/tdaly61/mini-loop.git
+    git clone --depth 1 --branch v2.0 https://github.com/tdaly61/mini-loop.git
     ~vagrant/mini-loop/install/mini-loop/ubuntu/k8s-install.sh -m install -u vagrant
     source ~vagrant/.bashrc
     # The following line is required because there is a mis-configuration in the miniloop repo
